@@ -34,7 +34,6 @@ export interface Treatment {
   notes: string;
   cost?: number;
   currency: string;
-  warrantyUntil?: string;
   attachments: Attachment[];
 }
 

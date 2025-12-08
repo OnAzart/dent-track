@@ -1,6 +1,6 @@
 import React from 'react';
 import { Treatment } from '../types';
-import { Calendar, DollarSign, Shield, FileImage, ArrowRight } from 'lucide-react';
+import { Calendar, DollarSign, FileImage, ArrowRight } from 'lucide-react';
 
 interface TimelineProps {
   treatments: Treatment[];
@@ -58,11 +58,6 @@ export const Timeline: React.FC<TimelineProps> = ({ treatments, onSelectTreatmen
             {t.cost && (
                 <span className="flex items-center gap-1 bg-green-50 text-green-700 px-2 py-0.5 rounded">
                     <DollarSign size={12} /> {t.cost} {t.currency}
-                </span>
-            )}
-            {t.warrantyUntil && (
-                <span className="flex items-center gap-1 bg-orange-50 text-orange-700 px-2 py-0.5 rounded">
-                    <Shield size={12} /> Until {new Date(t.warrantyUntil).toLocaleDateString()}
                 </span>
             )}
             {t.attachments.length > 0 && (

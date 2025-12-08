@@ -10,15 +10,12 @@ interface ToothMapProps {
 
 const Quadrant: React.FC<{ 
   teeth: Tooth[]; 
-  reverse?: boolean; 
   onToothClick: (t: Tooth) => void;
   selectedToothId: number | null;
-}> = ({ teeth, reverse, onToothClick, selectedToothId }) => {
-  const displayTeeth = reverse ? [...teeth].reverse() : teeth;
-
+}> = ({ teeth, onToothClick, selectedToothId }) => {
   return (
     <div className="flex gap-1 sm:gap-2">
-      {displayTeeth.map((tooth) => (
+      {teeth.map((tooth) => (
         <button
           key={tooth.id}
           onClick={() => onToothClick(tooth)}
@@ -47,11 +44,26 @@ const Quadrant: React.FC<{
 };
 
 export const ToothMap: React.FC<ToothMapProps> = ({ teeth, onToothClick, selectedToothId }) => {
-  // Filter teeth into quadrants based on ID ranges
-  const ur = teeth.filter(t => t.id >= 11 && t.id <= 18); // 18-11 in INITIAL_TEETH
-  const ul = teeth.filter(t => t.id >= 21 && t.id <= 28); // 21-28
-  const ll = teeth.filter(t => t.id >= 31 && t.id <= 38); // 31-38
-  const lr = teeth.filter(t => t.id >= 41 && t.id <= 48); // 41-48
+  // Explicitly sort quadrants for visual display
+  // Quadrant 1 (UR): 18 -> 11 (Right side of patient, Left side of screen)
+  const ur = teeth
+    .filter(t => t.id >= 11 && t.id <= 18)
+    .sort((a, b) => b.id - a.id);
+
+  // Quadrant 2 (UL): 21 -> 28 (Left side of patient, Right side of screen)
+  const ul = teeth
+    .filter(t => t.id >= 21 && t.id <= 28)
+    .sort((a, b) => a.id - b.id);
+
+  // Quadrant 4 (LR): 48 -> 41 (Right side of patient, Left side of screen)
+  const lr = teeth
+    .filter(t => t.id >= 41 && t.id <= 48)
+    .sort((a, b) => b.id - a.id);
+
+  // Quadrant 3 (LL): 31 -> 38 (Left side of patient, Right side of screen)
+  const ll = teeth
+    .filter(t => t.id >= 31 && t.id <= 38)
+    .sort((a, b) => a.id - b.id);
 
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-lg border border-slate-100 select-none">
@@ -69,7 +81,7 @@ export const ToothMap: React.FC<ToothMapProps> = ({ teeth, onToothClick, selecte
       {/* Lower Jaw */}
       <div className="relative">
         <div className="flex gap-4 sm:gap-8 justify-center items-start">
-          <Quadrant teeth={lr} reverse={true} onToothClick={onToothClick} selectedToothId={selectedToothId} />
+          <Quadrant teeth={lr} onToothClick={onToothClick} selectedToothId={selectedToothId} />
            <div className="w-px h-12 bg-slate-200 mx-1 hidden sm:block"></div>
           <Quadrant teeth={ll} onToothClick={onToothClick} selectedToothId={selectedToothId} />
         </div>

@@ -14,7 +14,6 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
   const [notes, setNotes] = useState('');
   const [cost, setCost] = useState<string>('');
   const [currency, setCurrency] = useState('USD');
-  const [warranty, setWarranty] = useState<string>('');
   
   // Simplified file handling for MVP (visual only mostly)
   const [files, setFiles] = useState<File[]>([]);
@@ -44,7 +43,6 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
       notes,
       cost: cost ? parseFloat(cost) : undefined,
       currency,
-      warrantyUntil: warranty || undefined,
       attachments
     });
   };
@@ -98,7 +96,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
             />
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
             <div className="col-span-1">
                 <label className="block text-sm font-medium text-slate-700 mb-1">Cost</label>
                 <input 
@@ -120,15 +118,6 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                     <option value="EUR">EUR</option>
                     <option value="UAH">UAH</option>
                 </select>
-            </div>
-            <div className="col-span-1">
-                <label className="block text-sm font-medium text-slate-700 mb-1">Warranty</label>
-                 <input 
-                    type="date" 
-                    value={warranty} 
-                    onChange={(e) => setWarranty(e.target.value)}
-                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
-                />
             </div>
         </div>
 

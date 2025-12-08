@@ -276,29 +276,6 @@ export default function App() {
                              </div>
                          </div>
                     </div>
-
-                    <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200 shadow-sm">
-                        <h3 className="font-bold text-lg text-orange-900 mb-4 flex items-center gap-2">
-                             <AlertTriangle size={20} className="text-orange-600" /> Active Warranties
-                        </h3>
-                         {treatments.filter(t => t.warrantyUntil && new Date(t.warrantyUntil) > new Date()).length > 0 ? (
-                             <ul className="space-y-2">
-                                 {treatments.filter(t => t.warrantyUntil && new Date(t.warrantyUntil) > new Date()).map(t => (
-                                     <li key={t.id} className="flex justify-between items-center bg-white/60 p-3 rounded-lg border border-orange-100">
-                                         <div className="flex items-center gap-2">
-                                            <span className="w-2 h-2 rounded-full bg-orange-400"></span>
-                                            <span className="text-orange-900 font-medium">{t.type} {t.toothId ? `(Tooth ${t.toothId})` : ''}</span>
-                                         </div>
-                                         <span className="text-orange-700 text-sm font-mono bg-white px-2 py-1 rounded">Ends: {t.warrantyUntil}</span>
-                                     </li>
-                                 ))}
-                             </ul>
-                         ) : (
-                             <div className="text-center py-4">
-                                <p className="text-orange-800/60 text-sm italic">No active treatment warranties on file.</p>
-                             </div>
-                         )}
-                    </div>
                 </div>
             </div>
         )}
