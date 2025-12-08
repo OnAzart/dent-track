@@ -1,0 +1,7 @@
+{
+  "name": "DentTrack",
+  "description": "A comprehensive dental health tracking application featuring an interactive 32-tooth map, treatment history journal, and AI-powered dental advice.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
