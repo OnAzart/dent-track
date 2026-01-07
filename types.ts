@@ -1,3 +1,4 @@
+
 export enum ToothStatus {
   HEALTHY = 'Healthy',
   FILLED = 'Filled',
@@ -41,6 +42,14 @@ export interface Tooth {
   id: number; // FDI Number (11-18, 21-28, 31-38, 41-48)
   label: string; // "18", "17", etc.
   status: ToothStatus;
+}
+
+export interface UserProfile {
+  name: string;
+  dob: string;
+  bloodType: string;
+  allergies: string;
+  medicalNotes: string;
 }
 
 export interface UserSettings {

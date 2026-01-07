@@ -66,7 +66,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                 <select 
                     value={type} 
                     onChange={(e) => setType(e.target.value as TreatmentType)}
-                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
+                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none text-base md:text-sm"
                 >
                     {Object.values(TreatmentType).map(t => (
                         <option key={t} value={t}>{t}</option>
@@ -79,7 +79,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                     type="date" 
                     value={date} 
                     onChange={(e) => setDate(e.target.value)}
-                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
+                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none text-base md:text-sm"
                     required
                 />
             </div>
@@ -91,7 +91,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                 value={notes} 
                 onChange={(e) => setNotes(e.target.value)}
                 rows={3}
-                className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
+                className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none text-base md:text-sm"
                 placeholder="Doctor's comments, diagnosis..."
             />
         </div>
@@ -103,7 +103,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                     type="number" 
                     value={cost} 
                     onChange={(e) => setCost(e.target.value)}
-                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
+                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none text-base md:text-sm"
                     placeholder="0.00"
                 />
             </div>
@@ -112,7 +112,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
                  <select 
                     value={currency} 
                     onChange={(e) => setCurrency(e.target.value)}
-                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none"
+                    className="w-full border border-slate-300 rounded-md p-2 focus:ring-2 focus:ring-dental-500 outline-none text-base md:text-sm"
                 >
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
@@ -144,7 +144,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({ selectedTooth, onS
         <div className="flex gap-3 pt-4 border-t border-slate-100">
              <button 
                 type="submit" 
-                className="flex-1 bg-dental-600 text-white py-2 px-4 rounded-md hover:bg-dental-500 transition-colors font-medium flex items-center justify-center gap-2"
+                className="flex-1 bg-dental-600 text-white py-2 px-4 rounded-md hover:bg-dental-500 transition-colors font-medium flex items-center justify-center gap-2 text-base md:text-sm"
             >
                 <Plus size={18} />
                 Save Record
