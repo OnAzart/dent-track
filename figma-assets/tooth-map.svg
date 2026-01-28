@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- DENTAL CHART - Complete Tooth Map -->
+
+  <!-- ============================================ -->
+  <!-- UPPER JAW - Right Side (18-11) -->
+  <!-- ============================================ -->
+
+  <!-- Tooth 18 - Upper Right Third Molar (Wisdom) -->
+  <g id="tooth-18" transform="translate(45, 95)">
+    <path d="M0 12 C0 5, 5 0, 12 0 L28 0 C35 0, 40 5, 40 12 L40 32 C40 40, 35 45, 28 48 L12 48 C5 45, 0 40, 0 32 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">18</text>
+  </g>
+
+  <!-- Tooth 17 - Upper Right Second Molar -->
+  <g id="tooth-17" transform="translate(55, 65)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L30 0 C36 0, 40 4, 40 10 L40 35 C40 42, 36 46, 30 48 L10 48 C4 46, 0 42, 0 35 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">17</text>
+  </g>
+
+  <!-- Tooth 16 - Upper Right First Molar -->
+  <g id="tooth-16" transform="translate(70, 42)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L32 0 C38 0, 42 4, 42 10 L42 38 C42 45, 38 50, 32 52 L10 52 C4 50, 0 45, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="21" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">16</text>
+  </g>
+
+  <!-- Tooth 15 - Upper Right Second Premolar -->
+  <g id="tooth-15" transform="translate(95, 25)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L24 0 C29 0, 32 3, 32 8 L32 38 C32 44, 29 48, 24 50 L8 50 C3 48, 0 44, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">15</text>
+  </g>
+
+  <!-- Tooth 14 - Upper Right First Premolar -->
+  <g id="tooth-14" transform="translate(118, 15)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L22 0 C27 0, 30 3, 30 8 L30 40 C30 46, 27 50, 22 52 L8 52 C3 50, 0 46, 0 40 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="15" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">14</text>
+  </g>
+
+  <!-- Tooth 13 - Upper Right Canine -->
+  <g id="tooth-13" transform="translate(142, 8)">
+    <path d="M4 0 C8 0, 20 0, 24 0 C28 3, 28 8, 28 15 L28 45 C28 52, 24 58, 18 60 L10 60 C4 58, 0 52, 0 45 L0 15 C0 8, 0 3, 4 0 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">13</text>
+  </g>
+
+  <!-- Tooth 12 - Upper Right Lateral Incisor -->
+  <g id="tooth-12" transform="translate(166, 5)">
+    <path d="M2 0 L22 0 C26 0, 28 4, 28 8 L28 48 C28 54, 24 58, 18 60 L10 60 C4 58, 0 54, 0 48 L0 8 C0 4, 2 0, 2 0 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">12</text>
+  </g>
+
+  <!-- Tooth 11 - Upper Right Central Incisor -->
+  <g id="tooth-11" transform="translate(192, 3)">
+    <path d="M0 5 C0 2, 2 0, 5 0 L27 0 C30 0, 32 2, 32 5 L32 50 C32 56, 28 60, 22 62 L10 62 C4 60, 0 56, 0 50 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">11</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- UPPER JAW - Left Side (21-28) -->
+  <!-- ============================================ -->
+
+  <!-- Tooth 21 - Upper Left Central Incisor -->
+  <g id="tooth-21" transform="translate(228, 3)">
+    <path d="M0 5 C0 2, 2 0, 5 0 L27 0 C30 0, 32 2, 32 5 L32 50 C32 56, 28 60, 22 62 L10 62 C4 60, 0 56, 0 50 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">21</text>
+  </g>
+
+  <!-- Tooth 22 - Upper Left Lateral Incisor -->
+  <g id="tooth-22" transform="translate(258, 5)">
+    <path d="M0 8 C0 4, 2 0, 6 0 L22 0 C26 0, 28 4, 28 8 L28 48 C28 54, 24 58, 18 60 L10 60 C4 58, 0 54, 0 48 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">22</text>
+  </g>
+
+  <!-- Tooth 23 - Upper Left Canine -->
+  <g id="tooth-23" transform="translate(282, 8)">
+    <path d="M4 0 C8 0, 20 0, 24 0 C28 3, 28 8, 28 15 L28 45 C28 52, 24 58, 18 60 L10 60 C4 58, 0 52, 0 45 L0 15 C0 8, 0 3, 4 0 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">23</text>
+  </g>
+
+  <!-- Tooth 24 - Upper Left First Premolar -->
+  <g id="tooth-24" transform="translate(304, 15)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L22 0 C27 0, 30 3, 30 8 L30 40 C30 46, 27 50, 22 52 L8 52 C3 50, 0 46, 0 40 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="15" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">24</text>
+  </g>
+
+  <!-- Tooth 25 - Upper Left Second Premolar -->
+  <g id="tooth-25" transform="translate(325, 25)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L24 0 C29 0, 32 3, 32 8 L32 38 C32 44, 29 48, 24 50 L8 50 C3 48, 0 44, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">25</text>
+  </g>
+
+  <!-- Tooth 26 - Upper Left First Molar -->
+  <g id="tooth-26" transform="translate(340, 42)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L32 0 C38 0, 42 4, 42 10 L42 38 C42 45, 38 50, 32 52 L10 52 C4 50, 0 45, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="21" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">26</text>
+  </g>
+
+  <!-- Tooth 27 - Upper Left Second Molar -->
+  <g id="tooth-27" transform="translate(355, 65)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L30 0 C36 0, 40 4, 40 10 L40 35 C40 42, 36 46, 30 48 L10 48 C4 46, 0 42, 0 35 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">27</text>
+  </g>
+
+  <!-- Tooth 28 - Upper Left Third Molar (Wisdom) -->
+  <g id="tooth-28" transform="translate(365, 95)">
+    <path d="M0 12 C0 5, 5 0, 12 0 L28 0 C35 0, 40 5, 40 12 L40 32 C40 40, 35 45, 28 48 L12 48 C5 45, 0 40, 0 32 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="-8" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">28</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LOWER JAW - Left Side (38-31) -->
+  <!-- ============================================ -->
+
+  <!-- Tooth 38 - Lower Left Third Molar (Wisdom) -->
+  <g id="tooth-38" transform="translate(365, 355)">
+    <path d="M0 12 C0 5, 5 0, 12 0 L28 0 C35 0, 40 5, 40 12 L40 32 C40 40, 35 45, 28 48 L12 48 C5 45, 0 40, 0 32 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="62" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">38</text>
+  </g>
+
+  <!-- Tooth 37 - Lower Left Second Molar -->
+  <g id="tooth-37" transform="translate(355, 385)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L30 0 C36 0, 40 4, 40 10 L40 35 C40 42, 36 46, 30 48 L10 48 C4 46, 0 42, 0 35 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="62" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">37</text>
+  </g>
+
+  <!-- Tooth 36 - Lower Left First Molar -->
+  <g id="tooth-36" transform="translate(340, 408)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L32 0 C38 0, 42 4, 42 10 L42 38 C42 45, 38 50, 32 52 L10 52 C4 50, 0 45, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="21" y="66" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">36</text>
+  </g>
+
+  <!-- Tooth 35 - Lower Left Second Premolar -->
+  <g id="tooth-35" transform="translate(325, 425)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L24 0 C29 0, 32 3, 32 8 L32 38 C32 44, 29 48, 24 50 L8 50 C3 48, 0 44, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="64" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">35</text>
+  </g>
+
+  <!-- Tooth 34 - Lower Left First Premolar -->
+  <g id="tooth-34" transform="translate(304, 435)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L22 0 C27 0, 30 3, 30 8 L30 40 C30 46, 27 50, 22 52 L8 52 C3 50, 0 46, 0 40 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="15" y="66" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">34</text>
+  </g>
+
+  <!-- Tooth 33 - Lower Left Canine -->
+  <g id="tooth-33" transform="translate(282, 442)">
+    <path d="M4 0 C8 0, 20 0, 24 0 C28 3, 28 8, 28 15 L28 45 C28 52, 24 58, 18 60 L10 60 C4 58, 0 52, 0 45 L0 15 C0 8, 0 3, 4 0 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="74" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">33</text>
+  </g>
+
+  <!-- Tooth 32 - Lower Left Lateral Incisor -->
+  <g id="tooth-32" transform="translate(258, 445)">
+    <path d="M0 8 C0 4, 2 0, 6 0 L20 0 C24 0, 26 4, 26 8 L26 45 C26 51, 22 55, 16 57 L10 57 C4 55, 0 51, 0 45 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="13" y="71" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">32</text>
+  </g>
+
+  <!-- Tooth 31 - Lower Left Central Incisor -->
+  <g id="tooth-31" transform="translate(232, 447)">
+    <path d="M0 5 C0 2, 2 0, 5 0 L23 0 C26 0, 28 2, 28 5 L28 45 C28 51, 24 55, 18 57 L10 57 C4 55, 0 51, 0 45 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="71" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">31</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LOWER JAW - Right Side (41-48) -->
+  <!-- ============================================ -->
+
+  <!-- Tooth 41 - Lower Right Central Incisor -->
+  <g id="tooth-41" transform="translate(192, 447)">
+    <path d="M0 5 C0 2, 2 0, 5 0 L23 0 C26 0, 28 2, 28 5 L28 45 C28 51, 24 55, 18 57 L10 57 C4 55, 0 51, 0 45 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="71" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">41</text>
+  </g>
+
+  <!-- Tooth 42 - Lower Right Lateral Incisor -->
+  <g id="tooth-42" transform="translate(166, 445)">
+    <path d="M0 8 C0 4, 2 0, 6 0 L20 0 C24 0, 26 4, 26 8 L26 45 C26 51, 22 55, 16 57 L10 57 C4 55, 0 51, 0 45 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="13" y="71" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">42</text>
+  </g>
+
+  <!-- Tooth 43 - Lower Right Canine -->
+  <g id="tooth-43" transform="translate(142, 442)">
+    <path d="M4 0 C8 0, 20 0, 24 0 C28 3, 28 8, 28 15 L28 45 C28 52, 24 58, 18 60 L10 60 C4 58, 0 52, 0 45 L0 15 C0 8, 0 3, 4 0 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="14" y="74" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">43</text>
+  </g>
+
+  <!-- Tooth 44 - Lower Right First Premolar -->
+  <g id="tooth-44" transform="translate(118, 435)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L22 0 C27 0, 30 3, 30 8 L30 40 C30 46, 27 50, 22 52 L8 52 C3 50, 0 46, 0 40 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="15" y="66" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">44</text>
+  </g>
+
+  <!-- Tooth 45 - Lower Right Second Premolar -->
+  <g id="tooth-45" transform="translate(95, 425)">
+    <path d="M0 8 C0 3, 3 0, 8 0 L24 0 C29 0, 32 3, 32 8 L32 38 C32 44, 29 48, 24 50 L8 50 C3 48, 0 44, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="16" y="64" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">45</text>
+  </g>
+
+  <!-- Tooth 46 - Lower Right First Molar -->
+  <g id="tooth-46" transform="translate(70, 408)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L32 0 C38 0, 42 4, 42 10 L42 38 C42 45, 38 50, 32 52 L10 52 C4 50, 0 45, 0 38 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="21" y="66" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">46</text>
+  </g>
+
+  <!-- Tooth 47 - Lower Right Second Molar -->
+  <g id="tooth-47" transform="translate(55, 385)">
+    <path d="M0 10 C0 4, 4 0, 10 0 L30 0 C36 0, 40 4, 40 10 L40 35 C40 42, 36 46, 30 48 L10 48 C4 46, 0 42, 0 35 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="62" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">47</text>
+  </g>
+
+  <!-- Tooth 48 - Lower Right Third Molar (Wisdom) -->
+  <g id="tooth-48" transform="translate(45, 355)">
+    <path d="M0 12 C0 5, 5 0, 12 0 L28 0 C35 0, 40 5, 40 12 L40 32 C40 40, 35 45, 28 48 L12 48 C5 45, 0 40, 0 32 Z"
+          fill="#FFFFFF" stroke="#2ECC71" stroke-width="2"/>
+    <text x="20" y="62" font-family="SF Pro, -apple-system, sans-serif" font-size="12" fill="#8A8A8A" text-anchor="middle">48</text>
+  </g>
+</svg>

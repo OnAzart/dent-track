@@ -16,6 +16,8 @@ export enum TreatmentType {
   CROWN = 'Crown',
   EXTRACTION = 'Extraction',
   VENEER = 'Veneer',
+  IMPLANT = 'Implant',
+  BRACES = 'Braces/Mouthguard',
   HYGIENE = 'Hygiene/Cleaning',
   CHECKUP = 'Checkup',
   OTHER = 'Other'
@@ -36,6 +38,7 @@ export interface Treatment {
   cost?: number;
   currency: string;
   attachments: Attachment[];
+  dentistId?: string; // Reference to local dentist
 }
 
 export interface Tooth {
@@ -58,3 +61,24 @@ export interface UserSettings {
 }
 
 export type Quadrant = 'UR' | 'UL' | 'LL' | 'LR'; // Upper Right, Upper Left, etc.
+
+export enum DentistType {
+  GENERAL = 'General Dentist',
+  SURGEON = 'Oral Surgeon',
+  ENDODONTIST = 'Endodontist',
+  ORTHODONTIST = 'Orthodontist',
+  PERIODONTIST = 'Periodontist',
+  PEDIATRIC = 'Pediatric Dentist',
+  PROSTHODONTIST = 'Prosthodontist',
+  OTHER = 'Other'
+}
+
+export interface Dentist {
+  id: string;
+  name: string;
+  clinicName?: string;
+  type?: DentistType;
+  phone?: string;
+  notes?: string;
+  isVerified: boolean; // For future matching with verified dentists
+}
