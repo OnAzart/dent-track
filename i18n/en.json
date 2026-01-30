@@ -1,0 +1,135 @@
+{
+  "app": {
+    "title": "DentTrack",
+    "tagline": "Track Your Dental Health"
+  },
+  "nav": {
+    "home": "Home",
+    "journal": "Journal",
+    "account": "Account"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInWithGoogle": "Sign in with Google",
+    "signOut": "Sign Out",
+    "loading": "Loading...",
+    "syncing": "Syncing...",
+    "offline": "Offline mode",
+    "online": "Online"
+  },
+  "toothMap": {
+    "title": "Tooth Map",
+    "status": {
+      "HEALTHY": "Healthy",
+      "FILLED": "Filled",
+      "TREATED": "Treated (Root Canal)",
+      "CROWN": "Crown",
+      "VENEER": "Veneer",
+      "MISSING": "Missing",
+      "IMPLANT": "Implant",
+      "ATTENTION": "Needs Attention"
+    }
+  },
+  "treatment": {
+    "title": "Treatment",
+    "add": "Add Treatment",
+    "edit": "Edit Treatment",
+    "log": "Log New Procedure",
+    "date": "Date",
+    "type": "Treatment Type",
+    "tooth": "Tooth Number",
+    "toothGeneral": "General (no specific tooth)",
+    "dentist": "Dentist",
+    "noDentist": "None selected",
+    "addDentist": "Add Dentist",
+    "cost": "Cost",
+    "currency": "Currency",
+    "notes": "Notes",
+    "warranty": "Warranty (months)",
+    "save": "Save Record",
+    "update": "Update Record",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "types": {
+      "FILLING": "Filling",
+      "ROOT_CANAL": "Root Canal",
+      "CROWN": "Crown",
+      "EXTRACTION": "Extraction",
+      "VENEER": "Veneer",
+      "IMPLANT": "Implant",
+      "BRACES": "Braces/Mouthguard",
+      "HYGIENE": "Hygiene",
+      "CHECKUP": "Checkup",
+      "OTHER": "Other"
+    }
+  },
+  "dentist": {
+    "title": "Dentist",
+    "add": "Add Dentist",
+    "my": "My Dentists",
+    "saved": "saved",
+    "name": "Dentist Name",
+    "clinic": "Clinic Name",
+    "type": "Specialization",
+    "phone": "Phone",
+    "notes": "Notes",
+    "types": {
+      "GENERAL": "General Dentist",
+      "SURGEON": "Oral Surgeon",
+      "ENDODONTIST": "Endodontist",
+      "ORTHODONTIST": "Orthodontist",
+      "PERIODONTIST": "Periodontist",
+      "PEDIATRIC": "Pediatric Dentist",
+      "PROSTHODONTIST": "Prosthodontist",
+      "OTHER": "Other"
+    }
+  },
+  "journal": {
+    "title": "Treatment Journal",
+    "viewList": "List",
+    "viewCalendar": "Calendar",
+    "noTreatments": "No treatments recorded yet",
+    "filterByTooth": "Filter by tooth",
+    "clearFilter": "Clear filter",
+    "today": "Today",
+    "stats": {
+      "procedures": "procedures",
+      "visits": "visits",
+      "spent": "spent"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Name",
+    "dob": "Date of Birth",
+    "bloodType": "Blood Type",
+    "allergies": "Allergies",
+    "medicalNotes": "Medical Notes",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeAuto": "Auto",
+    "export": "Export Data",
+    "exportForDentist": "Export for Dentist",
+    "exportPersonal": "Personal Export"
+  },
+  "export": {
+    "title": "Export Data",
+    "dentistMode": "Dentist Mode",
+    "dentistModeDesc": "Without dentist contact details",
+    "personalMode": "Personal Mode",
+    "personalModeDesc": "Full information with contacts",
+    "download": "Download PDF",
+    "preparing": "Preparing PDF..."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back"
+  }
+}

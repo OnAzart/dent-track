@@ -1,0 +1,135 @@
+{
+  "app": {
+    "title": "DentTrack",
+    "tagline": "Відстежуйте здоров'я ваших зубів"
+  },
+  "nav": {
+    "home": "Головна",
+    "journal": "Журнал",
+    "account": "Акаунт"
+  },
+  "auth": {
+    "signIn": "Увійти",
+    "signInWithGoogle": "Увійти через Google",
+    "signOut": "Вийти",
+    "loading": "Завантаження...",
+    "syncing": "Синхронізація...",
+    "offline": "Офлайн режим",
+    "online": "Онлайн"
+  },
+  "toothMap": {
+    "title": "Карта зубів",
+    "status": {
+      "HEALTHY": "Здоровий",
+      "FILLED": "Запломбований",
+      "TREATED": "Лікований (кореневий канал)",
+      "CROWN": "Коронка",
+      "VENEER": "Вінір",
+      "MISSING": "Відсутній",
+      "IMPLANT": "Імплант",
+      "ATTENTION": "Потребує уваги"
+    }
+  },
+  "treatment": {
+    "title": "Процедура",
+    "add": "Додати процедуру",
+    "edit": "Редагувати процедуру",
+    "log": "Записати нову процедуру",
+    "date": "Дата",
+    "type": "Тип процедури",
+    "tooth": "Номер зуба",
+    "toothGeneral": "Загальна (без конкретного зуба)",
+    "dentist": "Лікар",
+    "noDentist": "Не вказано",
+    "addDentist": "Додати лікаря",
+    "cost": "Вартість",
+    "currency": "Валюта",
+    "notes": "Примітки",
+    "warranty": "Гарантія (місяці)",
+    "save": "Зберегти",
+    "update": "Оновити запис",
+    "cancel": "Скасувати",
+    "delete": "Видалити",
+    "types": {
+      "FILLING": "Пломба",
+      "ROOT_CANAL": "Кореневий канал",
+      "CROWN": "Коронка",
+      "EXTRACTION": "Видалення",
+      "VENEER": "Вінір",
+      "IMPLANT": "Імплант",
+      "BRACES": "Брекети/Капа",
+      "HYGIENE": "Чистка",
+      "CHECKUP": "Огляд",
+      "OTHER": "Інше"
+    }
+  },
+  "dentist": {
+    "title": "Лікар",
+    "add": "Додати лікаря",
+    "my": "Мої лікарі",
+    "saved": "збережено",
+    "name": "Ім'я лікаря",
+    "clinic": "Назва клініки",
+    "type": "Спеціалізація",
+    "phone": "Телефон",
+    "notes": "Примітки",
+    "types": {
+      "GENERAL": "Стоматолог-терапевт",
+      "SURGEON": "Хірург",
+      "ENDODONTIST": "Ендодонтист",
+      "ORTHODONTIST": "Ортодонт",
+      "PERIODONTIST": "Пародонтолог",
+      "PEDIATRIC": "Дитячий стоматолог",
+      "PROSTHODONTIST": "Протезист",
+      "OTHER": "Інше"
+    }
+  },
+  "journal": {
+    "title": "Журнал процедур",
+    "viewList": "Список",
+    "viewCalendar": "Календар",
+    "noTreatments": "Поки що немає записів",
+    "filterByTooth": "Фільтр по зубу",
+    "clearFilter": "Очистити фільтр",
+    "today": "Сьогодні",
+    "stats": {
+      "procedures": "процедур",
+      "visits": "візитів",
+      "spent": "витрачено"
+    }
+  },
+  "profile": {
+    "title": "Профіль",
+    "name": "Ім'я",
+    "dob": "Дата народження",
+    "bloodType": "Група крові",
+    "allergies": "Алергії",
+    "medicalNotes": "Медичні примітки",
+    "settings": "Налаштування",
+    "language": "Мова",
+    "theme": "Тема",
+    "themeLight": "Світла",
+    "themeDark": "Темна",
+    "themeAuto": "Авто",
+    "export": "Експорт даних",
+    "exportForDentist": "Експорт для лікаря",
+    "exportPersonal": "Особистий експорт"
+  },
+  "export": {
+    "title": "Експорт даних",
+    "dentistMode": "Режим для лікаря",
+    "dentistModeDesc": "Без особистих контактів лікарів",
+    "personalMode": "Особистий режим",
+    "personalModeDesc": "Повна інформація з контактами",
+    "download": "Завантажити PDF",
+    "preparing": "Підготовка PDF..."
+  },
+  "common": {
+    "loading": "Завантаження...",
+    "error": "Помилка",
+    "success": "Успішно",
+    "confirm": "Підтвердити",
+    "close": "Закрити",
+    "back": "Назад"
+  }
+}
