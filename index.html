@@ -33,6 +33,23 @@
       }
     </script>
     <style>
+      /* CSS Variables for theming */
+      :root {
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-border: #e2e8f0;
+        --color-text: #0f172a;
+        --color-text-secondary: #64748b;
+      }
+
+      :root.dark {
+        --color-bg: #0f172a;
+        --color-surface: #1e293b;
+        --color-border: #334155;
+        --color-text: #f1f5f9;
+        --color-text-secondary: #cbd5e1;
+      }
+
       /* Prevent iOS rubber banding / bounce scroll */
       html, body {
         position: fixed;
@@ -42,6 +59,9 @@
         overscroll-behavior: none;
         -webkit-overflow-scrolling: touch;
         -webkit-tap-highlight-color: transparent;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
 
       #root {
@@ -52,6 +72,17 @@
         bottom: 0;
         overflow: hidden;
       }
+
+      /* Dark mode overrides for Tailwind classes */
+      .dark .bg-slate-50 { background-color: var(--color-bg) !important; }
+      .dark .bg-white { background-color: var(--color-surface) !important; }
+      .dark .text-slate-900 { color: var(--color-text) !important; }
+      .dark .text-slate-800 { color: var(--color-text) !important; }
+      .dark .text-slate-700 { color: var(--color-text) !important; }
+      .dark .text-slate-600 { color: var(--color-text-secondary) !important; }
+      .dark .text-slate-500 { color: var(--color-text-secondary) !important; }
+      .dark .border-slate-200 { border-color: var(--color-border) !important; }
+      .dark .border-slate-300 { border-color: var(--color-border) !important; }
 
       /* Custom scrollbar for better aesthetics */
       ::-webkit-scrollbar {
@@ -67,6 +98,12 @@
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #94a3b8;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #475569;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #64748b;
       }
     </style>
 </head>

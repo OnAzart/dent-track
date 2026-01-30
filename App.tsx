@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ToothMap } from './components/ToothMap';
 import { TreatmentForm } from './components/TreatmentForm';
 import { Timeline } from './components/Timeline';
@@ -22,11 +23,12 @@ import {
   localStore,
   setupDeepLinkListener,
 } from './lib/supabase';
+import { generatePDF } from './lib/export';
 import {
   Plus, Calendar, Activity, X,
   Settings, Home, LayoutGrid, UserPlus,
   Users, ChevronRight, Phone, Building2, Stethoscope,
-  CalendarDays, List, Loader2, Cloud, CloudOff, History, Filter
+  CalendarDays, List, Loader2, Cloud, CloudOff, History, Filter, FileDown, Moon, Sun
 } from 'lucide-react';
 
 // Type for Supabase user
@@ -36,6 +38,14 @@ interface User {
 }
 
 export default function App() {
+  // --- i18n ---
+  const { t, i18n } = useTranslation();
+
+  // --- Theme State ---
+  const [theme, setTheme] = useState<'light' | 'dark' | 'auto'>(() => {
+    return (localStorage.getItem('theme') as 'light' | 'dark' | 'auto') || 'auto';
+  });
+
   // --- Auth State ---
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -176,6 +186,24 @@ export default function App() {
       subscription.unsubscribe();
     };
   }, [loadCloudData, loadLocalData, refreshAuthState]);
+
+  // ============================================
+  // THEME EFFECT
+  // ============================================
+  useEffect(() => {
+    const root = document.documentElement;
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = theme === 'dark' || (theme === 'auto' && systemDark);
+    
+    if (isDark) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+    
+    // Persist theme to localStorage
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   // ============================================
   // HANDLERS
@@ -347,6 +375,22 @@ export default function App() {
     });
   };
 
+  const handleExport = async (mode: 'dentist' | 'personal') => {
+    try {
+      await generatePDF({
+        userProfile,
+        treatments,
+        dentists,
+        teeth,
+        mode,
+        language: i18n.language,
+      });
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      alert(t('common.error'));
+    }
+  };
+
   const selectedTooth = teeth.find(t => t.id === selectedToothId) || null;
 
   // Filter treatments for journal view
@@ -360,7 +404,7 @@ export default function App() {
       <div className="h-[100dvh] w-full bg-slate-50 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-8 h-8 animate-spin text-dental-600 mx-auto mb-3" />
-          <p className="text-slate-500">Loading...</p>
+          <p className="text-slate-500">{t('auth.loading')}</p>
         </div>
       </div>
     );
@@ -542,7 +586,7 @@ export default function App() {
             {view === 'profile' && (
                 <div className="animate-fade-in space-y-6">
                     <div className="flex items-center justify-between">
-                         <h2 className="text-2xl font-bold text-slate-900">Account</h2>
+                         <h2 className="text-2xl font-bold text-slate-900">{t('profile.title')}</h2>
                          <button onClick={() => setView('map')} className="text-slate-400"><X size={24}/></button>
                     </div>
 
@@ -557,7 +601,7 @@ export default function App() {
                                     <h3 className="font-bold text-slate-900">Cloud Sync</h3>
                                     <p className="text-slate-500 text-sm">
                                       {isSupabaseConfigured()
-                                        ? 'Sign in to backup your data'
+                                        ? t('auth.signIn')
                                         : 'Supabase not configured'}
                                     </p>
                                 </div>
@@ -567,7 +611,7 @@ export default function App() {
                                   className="bg-slate-900 text-white px-4 py-2 rounded-xl font-medium text-sm hover:bg-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                                 >
                                     {isSyncing && <Loader2 className="w-4 h-4 animate-spin" />}
-                                    Sign In
+                                    {t('auth.signIn')}
                                 </button>
                             </div>
                             {!isSupabaseConfigured() && (
@@ -583,7 +627,7 @@ export default function App() {
                                     <Cloud size={24} />
                                 </div>
                                 <div className="flex-1">
-                                    <p className="text-xs font-bold text-green-600 uppercase tracking-widest">Synced</p>
+                                    <p className="text-xs font-bold text-green-600 uppercase tracking-widest">{t('auth.syncing')}</p>
                                     <p className="font-medium text-slate-900 text-sm">{user.email}</p>
                                 </div>
                                 <button
@@ -591,11 +635,64 @@ export default function App() {
                                   disabled={isSyncing}
                                   className="text-red-500 text-sm font-medium bg-red-50 px-4 py-2 rounded-xl hover:bg-red-100 disabled:opacity-50"
                                 >
-                                    Log Out
+                                    {t('auth.signOut')}
                                 </button>
                             </div>
                         </div>
                     )}
+
+                    {/* Settings Section */}
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 space-y-4">
+                        <h3 className="font-bold text-slate-900">{t('profile.settings')}</h3>
+                        
+                        {/* Language Toggle */}
+                        <div>
+                            <label className="text-sm font-bold text-slate-700 block mb-2">{t('profile.language')}</label>
+                            <select
+                                value={i18n.language}
+                                onChange={(e) => i18n.changeLanguage(e.target.value)}
+                                className="w-full p-3 border border-slate-200 rounded-xl bg-white text-slate-900 font-medium"
+                            >
+                                <option value="en">English</option>
+                                <option value="uk">Українська</option>
+                            </select>
+                        </div>
+
+                        {/* Theme Toggle */}
+                        <div>
+                            <label className="text-sm font-bold text-slate-700 block mb-2">{t('profile.theme')}</label>
+                            <select
+                                value={theme}
+                                onChange={(e) => setTheme(e.target.value as 'light' | 'dark' | 'auto')}
+                                className="w-full p-3 border border-slate-200 rounded-xl bg-white text-slate-900 font-medium"
+                            >
+                                <option value="light">{t('profile.themeLight')}</option>
+                                <option value="dark">{t('profile.themeDark')}</option>
+                                <option value="auto">{t('profile.themeAuto')}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    {/* Export Section */}
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 space-y-4">
+                        <h3 className="font-bold text-slate-900">{t('profile.export')}</h3>
+                        
+                        <button
+                            onClick={() => handleExport('dentist')}
+                            className="w-full bg-dental-600 hover:bg-dental-500 text-white p-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+                        >
+                            <FileDown size={20} />
+                            {t('profile.exportForDentist')}
+                        </button>
+                        
+                        <button
+                            onClick={() => handleExport('personal')}
+                            className="w-full bg-slate-600 hover:bg-slate-500 text-white p-4 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+                        >
+                            <FileDown size={20} />
+                            {t('profile.exportPersonal')}
+                        </button>
+                    </div>
 
                     {/* Menu Options */}
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
@@ -607,8 +704,8 @@ export default function App() {
                                 <UserPlus size={20} />
                             </div>
                             <div className="flex-1 text-left">
-                                <p className="font-medium text-slate-900">Add Dentist</p>
-                                <p className="text-slate-500 text-sm">Save your dentist's contact info</p>
+                                <p className="font-medium text-slate-900">{t('dentist.add')}</p>
+                                <p className="text-slate-500 text-sm">{t('dentist.add')}</p>
                             </div>
                             <ChevronRight size={20} className="text-slate-300" />
                         </button>
@@ -621,8 +718,8 @@ export default function App() {
                                 <Users size={20} />
                             </div>
                             <div className="flex-1 text-left">
-                                <p className="font-medium text-slate-900">My Dentists</p>
-                                <p className="text-slate-500 text-sm">{dentists.length} saved</p>
+                                <p className="font-medium text-slate-900">{t('dentist.my')}</p>
+                                <p className="text-slate-500 text-sm">{dentists.length} {t('dentist.saved')}</p>
                             </div>
                             <ChevronRight size={20} className="text-slate-300" />
                         </button>
@@ -674,15 +771,15 @@ export default function App() {
         <div className="flex justify-around items-center px-4 py-2">
           <button onClick={() => setView('map')} className={`flex flex-col items-center gap-0.5 transition-colors ${view === 'map' ? 'text-dental-600' : 'text-slate-300'}`}>
               <Home size={22} />
-              <span className="text-[10px] font-bold">Home</span>
+              <span className="text-[10px] font-bold">{t('nav.home')}</span>
           </button>
           <button onClick={() => setView('timeline')} className={`flex flex-col items-center gap-0.5 transition-colors ${view === 'timeline' ? 'text-dental-600' : 'text-slate-300'}`}>
               <Calendar size={22} />
-              <span className="text-[10px] font-bold">Journal</span>
+              <span className="text-[10px] font-bold">{t('nav.journal')}</span>
           </button>
           <button onClick={() => setView('profile')} className={`flex flex-col items-center gap-0.5 transition-colors ${view === 'profile' ? 'text-dental-600' : 'text-slate-300'}`}>
               <Settings size={22} />
-              <span className="text-[10px] font-bold">Account</span>
+              <span className="text-[10px] font-bold">{t('nav.account')}</span>
           </button>
         </div>
         {/* Safe area spacer */}
@@ -695,7 +792,7 @@ export default function App() {
                 <div className="w-full md:max-w-2xl bg-white rounded-t-3xl md:rounded-3xl overflow-hidden max-h-[90vh] flex flex-col pb-[env(safe-area-inset-bottom)] shadow-2xl">
                      <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
                         <span className="font-bold text-slate-800">
-                          {editingTreatment ? 'Edit Procedure' : 'Log New Procedure'}
+                          {editingTreatment ? t('treatment.edit') : t('treatment.log')}
                         </span>
                         <button onClick={() => { setIsAddingTreatment(false); setEditingTreatment(null); }} className="p-2 text-slate-400 hover:text-slate-600"><X size={24}/></button>
                      </div>
@@ -721,7 +818,7 @@ export default function App() {
             <div className="fixed inset-0 z-[60] flex items-end md:items-center justify-center bg-slate-900/60 backdrop-blur-sm animate-fade-in">
                 <div className="w-full md:max-w-lg bg-white rounded-t-3xl md:rounded-3xl overflow-hidden max-h-[90vh] flex flex-col pb-[env(safe-area-inset-bottom)] shadow-2xl">
                      <div className="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-                        <span className="font-bold text-slate-800">Add Dentist</span>
+                        <span className="font-bold text-slate-800">{t('dentist.add')}</span>
                         <button onClick={() => setIsAddingDentist(false)} className="p-2 text-slate-400 hover:text-slate-600"><X size={24}/></button>
                      </div>
                      <div className="overflow-y-auto p-4 md:p-6">
